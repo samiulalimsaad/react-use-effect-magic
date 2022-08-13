@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const Dependencies = () => {
     const [name, setName] = useState("");
@@ -7,9 +7,17 @@ const Dependencies = () => {
         selected: false,
     });
 
+    // useEffect(() => {
+    //     console.log("useEffect runs");
+    // }, [state.name, state.selected]);
+
+    const user = useMemo(
+        () => ({ name: state.name, selected: state.selected }),
+        [state.name, state.selected]
+    );
     useEffect(() => {
         console.log("useEffect runs");
-    }, [state]);
+    }, [user]);
 
     console.count("rendered");
     return (

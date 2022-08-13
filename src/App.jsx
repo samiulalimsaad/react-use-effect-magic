@@ -1,11 +1,12 @@
 import React from "react";
-import Dependencies from "./Dependencies";
+import UpdateState from "./UpdateState";
 
 const App = () => {
     return (
         <div>
             {/* <Basic/> */}
-            <Dependencies />
+            {/* <Dependencies /> */}
+            <UpdateState />
         </div>
     );
 };
