@@ -8,6 +8,7 @@ const UpdateState = () => {
         const interval = setInterval(() => {
             setCount((p) => p + 1);
         }, 1000);
+
         return () => {
             clearInterval(interval);
         };
